@@ -24,6 +24,10 @@ def square(value1):
     value1 = int(value1)
     return int(value1 * value1)
 
+def sroot(value1):
+    value1 = int(value1)
+    return float(value1 ** 0.5)
+
 class Calculator:
     result = 0
 
@@ -48,4 +52,8 @@ class Calculator:
 
     def sq(self, value1):
         self.result = square(value1)
+        return self.result
+
+    def root(self, value1):
+        self.result = sroot(value1)
         return self.result

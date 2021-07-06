@@ -9,3 +9,4 @@ The project is a calculator that performs basic functions of Addition, Subtracti
 
 __Output Screenshots:__
 
+<img width="1440" alt="Screenshot 1" src="https://user-images.githubusercontent.com/83378087/124577254-17389700-de1b-11eb-829e-218d9fc08f2e.png">

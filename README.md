@@ -9,4 +9,3 @@ The project is a calculator that performs basic functions of Addition, Subtracti
 
 __Output Screenshots:__
 
-https://github.com/pratik1596/calculator/issues/1#issue-937700200

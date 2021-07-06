@@ -15,6 +15,15 @@ def multiplication(value1, value2):
     value2 = int(value2)
     return value1 * value2
 
+def division(value1, value2):
+    value1 = float(value1)
+    value2 = float(value2)
+    return round(value1 / value2)
+
+def square(value1):
+    value1 = int(value1)
+    return int(value1 * value1)
+
 class Calculator:
     result = 0
 
@@ -31,4 +40,12 @@ class Calculator:
 
     def mul(self, value1, value2):
         self.result = multiplication(value1, value2)
+        return self.result
+
+    def div(self, value1, value2):
+        self.result = division(value1, value2)
+        return self.result
+
+    def sq(self, value1):
+        self.result = square(value1)
         return self.result

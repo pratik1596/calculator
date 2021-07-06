@@ -11,34 +11,36 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.object, Calculator)
 
     def test_addition_method_calculator(self):
-        print("Testing Addition")
+        print("...Starting Addition Testing")
         test_data = CSVReader('./src/Unit Test Addition.csv').data
         for row in test_data:
-            a = row['Value 1']
-            b = row['Value 2']
-            real_result = int(row['Result'])
-            self.assertEqual(self.object.add(a, b), real_result)
-            self.assertEqual(self.object.result, real_result)
+            self.assertEqual(self.object.add(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.object.result, int(row['Result']))
+        print("Addition Completed...")
 
     def test_subtraction_method_calculator(self):
-        print("Testing Subtraction")
+        print("...Starting Subtraction Testing")
         test_data = CSVReader('./src/Unit Test Subtraction.csv').data
         for row in test_data:
-            a = row['Value 1']
-            b = row['Value 2']
-            real_result = int(row['Result'])
-            self.assertEqual(self.object.sub(a, b), real_result)
-            self.assertEqual(self.object.result, real_result)
+            self.assertEqual(self.object.sub(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.object.result, int(row['Result']))
+        print("Subtraction Completed...")
 
     def test_multiplication_method_calculator(self):
-        print("Testing Multiplication")
+        print("...Starting Multiplication Testing")
         test_data = CSVReader('./src/Unit Test Multiplication.csv').data
         for row in test_data:
-            a = row['Value 1']
-            b = row['Value 2']
-            real_result = int(row['Result'])
-            self.assertEqual(self.object.mul(a, b), real_result)
-            self.assertEqual(self.object.result, real_result)
+            self.assertEqual(self.object.mul(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.object.result, int(row['Result']))
+        print("Multiplication Completed...")
+
+    def test_square_method_calculator(self):
+        print("...Starting Square Testing")
+        test_data = CSVReader('./src/Unit Test Square.csv').data
+        for row in test_data:
+            self.assertEqual(self.object.sq(row['Value 1']), int(row['Result']))
+            self.assertEqual(self.object.result, int(row['Result']))
+        print("Square Completed...")
 
 if __name__ == '__main__':
     unittest.main()

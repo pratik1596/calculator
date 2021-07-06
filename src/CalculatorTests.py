@@ -30,5 +30,15 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.object.sub(a, b), real_result)
             self.assertEqual(self.object.result, real_result)
 
+    def test_multiplication_method_calculator(self):
+        print("Testing Multiplication")
+        test_data = CSVReader('./src/Unit Test Multiplication.csv').data
+        for row in test_data:
+            a = row['Value 1']
+            b = row['Value 2']
+            real_result = int(row['Result'])
+            self.assertEqual(self.object.mul(a, b), real_result)
+            self.assertEqual(self.object.result, real_result)
+
 if __name__ == '__main__':
     unittest.main()

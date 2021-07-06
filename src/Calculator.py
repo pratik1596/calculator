@@ -16,9 +16,9 @@ def multiplication(value1, value2):
     return value1 * value2
 
 def division(value1, value2):
-    value1 = float(value1)
-    value2 = float(value2)
-    return round(value1 / value2)
+    value1 = int(value1)
+    value2 = int(value2)
+    return float(value2 / value1)
 
 def square(value1):
     value1 = int(value1)

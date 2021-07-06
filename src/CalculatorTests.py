@@ -1,6 +1,7 @@
 import unittest
 from Calculator import Calculator
 from CSVReader import CSVReader
+from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
 
@@ -11,6 +12,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.object, Calculator)
 
     def test_addition_method_calculator(self):
+        print(" ")
         print("...Starting Addition Testing")
         test_data = CSVReader('./src/Unit Test Addition.csv').data
         for row in test_data:
@@ -19,6 +21,7 @@ class MyTestCase(unittest.TestCase):
         print("Addition Test Completed...")
 
     def test_subtraction_method_calculator(self):
+        print(" ")
         print("...Starting Subtraction Testing")
         test_data = CSVReader('./src/Unit Test Subtraction.csv').data
         for row in test_data:
@@ -27,6 +30,7 @@ class MyTestCase(unittest.TestCase):
         print("Subtraction Test Completed...")
 
     def test_multiplication_method_calculator(self):
+        print(" ")
         print("...Starting Multiplication Testing")
         test_data = CSVReader('./src/Unit Test Multiplication.csv').data
         for row in test_data:
@@ -34,7 +38,17 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.object.result, int(row['Result']))
         print("Multiplication Test Completed...")
 
+    def test_division_method_calculator(self):
+        print(" ")
+        print("...Starting Division Testing")
+        test_data = CSVReader('./src/Unit Test Division.csv').data
+        for row in test_data:
+            self.assertAlmostEqual(self.object.div(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertAlmostEqual(self.object.result, float(row['Result']))
+        print("Division Test Completed...")
+
     def test_square_method_calculator(self):
+        print(" ")
         print("...Starting Square Testing")
         test_data = CSVReader('./src/Unit Test Square.csv').data
         for row in test_data:
@@ -43,6 +57,7 @@ class MyTestCase(unittest.TestCase):
         print("Square Test Completed...")
 
     def test_squareroot_method_calculator(self):
+        print(" ")
         print("...Starting Square Root Testing")
         test_data = CSVReader('./src/Unit Test Square Root.csv').data
         for row in test_data:

@@ -1,32 +1,9 @@
-#Static Methods
-
-def addition(value1, value2):
-    value1 = int(value1)
-    value2 = int(value2)
-    return value1 + value2
-
-def subtraction(value1, value2):
-    value1 = int(value1)
-    value2 = int(value2)
-    return value1 - value2
-
-def multiplication(value1, value2):
-    value1 = int(value1)
-    value2 = int(value2)
-    return value1 * value2
-
-def division(value1, value2):
-    value1 = int(value1)
-    value2 = int(value2)
-    return float(value2 / value1)
-
-def square(value1):
-    value1 = int(value1)
-    return int(value1 * value1)
-
-def sroot(value1):
-    value1 = int(value1)
-    return float(value1 ** 0.5)
+from Calculator.Addition import addition
+from Calculator.Subtraction import subtraction
+from Calculator.Multiplication import multiplication
+from Calculator.Division import division
+from Calculator.Square import square
+from Calculator.Square_Root import sroot
 
 class Calculator:
     result = 0
